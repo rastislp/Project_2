@@ -21,6 +21,7 @@ app.use(bodyParser.json());
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods","GET,PUT,POST,DELETE,OPTION");
     res.header("Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept");
     next();
@@ -34,6 +35,12 @@ app.post('/name', function(req, res){
 
 app.get('/', function (req, res) {
    res.send('Hello from Express');
+})
+
+app.delete('/api/posts/:id',function(req, res){
+    console.log("Deleting item"+ req.params.id);
+    PostModel.deleteOne({_id: req.params.id},
+        function(err){});
 })
 
 app.post('/api/posts', function(req, res){
