@@ -3,11 +3,11 @@ import { NgForm } from "@angular/forms";
 import {PostService} from '../services/post.service';
 
 @Component({
-  selector: 'app-post-create',
-  templateUrl: './post-create.component.html',
-  styleUrls: ['./post-create.component.css']
+  selector: 'app-insert',
+  templateUrl: './insert.component.html',
+  styleUrls: ['./insert.component.css']
 })
-export class PostCreateComponent implements OnInit {
+export class InsertComponent implements OnInit {
 
   constructor(private service:PostService) { }
 

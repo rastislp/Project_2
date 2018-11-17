@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { PostDetailsComponent } from './post-details/post-details.component';
+import { CatalogComponent } from './catalog/catalog.component';
 import {PostService} from './services/post.service';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,16 +14,16 @@ import { MatInputModule,
   MatIconModule,
   MatToolbarModule,
   MatExpansionModule} from '@angular/material';
-import { PostCreateComponent } from './post-create/post-create.component';
+import { InsertComponent } from './insert/insert.component';
 
 const appRoutes: Routes = [
   {
     path: 'list',
-    component: PostDetailsComponent
+    component: CatalogComponent
   },
   {
     path: 'create',
-    component: PostCreateComponent
+    component: InsertComponent
   }
 ];
 
@@ -31,8 +31,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    PostDetailsComponent,
-    PostCreateComponent
+    CatalogComponent,
+    InsertComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

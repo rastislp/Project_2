@@ -3,11 +3,11 @@ import {PostService} from '../services/post.service';
 import { Observable } from 'rxjs';
 import {Post} from '../post.model';
 @Component({
-  selector: 'app-post-details',
-  templateUrl: './post-details.component.html',
-  styleUrls: ['./post-details.component.css']
+  selector: 'app-catalog',
+  templateUrl: './catalog.component.html',
+  styleUrls: ['./catalog.component.css']
 })
-export class PostDetailsComponent implements OnInit {
+export class CatalogComponent implements OnInit {
 
   
   posts: any = [];
