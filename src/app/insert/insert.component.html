@@ -3,23 +3,48 @@
     <mat-form-field>
       <input
         matInput
+        rows="1"
         type="text"
-        name="title"
+        name="product_id"
         ngModel
         required
         minlength="3"
-        #title="ngModel">
-      <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
+        #product_id="ngModel">
+      <mat-error *ngIf="product_id.invalid">Please enter a post title.</mat-error>
     </mat-form-field>
     <mat-form-field>
-      <textarea
+      <input
         matInput
-        rows="4"
-        name="content"
+        rows="2"
+        type="text"
+        name="product_name"
         ngModel
         required
-        #content="ngModel"></textarea>
-      <mat-error *ngIf="content.invalid">Please enter a post title.</mat-error>
+        minlength="3"
+        #product_name="ngModel">
+      <mat-error *ngIf="product_name.invalid">Please enter a post title.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        rows="3"
+        type="text"
+        name="product_category"
+        ngModel
+        required
+        minlength="3"
+        #product_category="ngModel">
+      <mat-error *ngIf="product_category.invalid">Please enter a post title.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        rows="4"
+        name="product_price"
+        ngModel
+        required
+        #product_price="ngModel">
+      <mat-error *ngIf="product_price.invalid">Please enter a post title.</mat-error>
     </mat-form-field>
     <button
       mat-raised-button
@@ -27,3 +52,4 @@
       type="submit">Save Post</button>
   </form>
 </mat-card>
+

@@ -21,8 +21,8 @@ export class PostService {
     return [...this.posts];
   }
 
-  addPost(title: string, content: string): Observable<any> {
-    const post: Post = {title: title, content: content};
+  addPost(product_id: string,product_name: string,product_category: string, product_price: string): Observable<any> {
+    const post: Post = {product_id: product_id,product_name: product_name,product_category: product_category, product_price: product_price};
     return this.http.post("http://localhost:8081/api/posts",post);
   }
   deletePost(id: String): Observable<any>{

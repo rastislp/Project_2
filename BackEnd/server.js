@@ -9,8 +9,11 @@ mongoose.connect(mongoDB);
 
 var Schema = mongoose.Schema;
 var postSchema = new Schema({
-   title: String,
-   content: String
+   product_id: String,
+   product_name: String,
+   product_category: String,
+   product_price: String,
+   
 })
 
 var PostModel = mongoose.model('post',postSchema);
@@ -45,12 +48,16 @@ app.delete('/api/posts/:id',function(req, res){
 
 app.post('/api/posts', function(req, res){
     console.log("post successful");
-    console.log(req.body.title);
-    console.log(req.body.content);
+    console.log(req.body.product_id);
+    console.log(req.body.product_name);
+    console.log(req.body.product_category);
+    console.log(req.body.product_price);
 
     PostModel.create({
-        title: req.body.title,
-        content: req.body.content
+        product_id: req.body.product_id,
+        product_name: req.body.product_name,
+        product_name: req.body.product_category,
+        product_id: req.body.product_price,
     });
 })
 

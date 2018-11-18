@@ -13,7 +13,7 @@ export class InsertComponent implements OnInit {
 
   onAddPost(form: NgForm) {
 
-    this.service.addPost(form.value.title, form.value.content).subscribe();
+    this.service.addPost(form.value.product_id,form.value.product_name,form.value.product_category, form.value.product_price).subscribe();
     
     console.log(form.value);
     form.resetForm();

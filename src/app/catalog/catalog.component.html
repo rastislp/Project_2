@@ -4,9 +4,17 @@
 <mat-accordion multi="true" *ngIf="posts.length > 0">
   <mat-expansion-panel [expanded]="true" *ngFor="let post of posts">
     <mat-expansion-panel-header>
-      {{ post.title }}
+      {{ post.product_id }}
     </mat-expansion-panel-header>
-    <p>{{ post.content }}</p>
+    <mat-expansion-panel-header>
+      {{ post.product_name }}
+    </mat-expansion-panel-header>
+    <mat-expansion-panel-header>
+      {{ post.product_category }}
+    </mat-expansion-panel-header>
+  <mat-expansion-panel-header>
+    {{ post.product_price }}
+  </mat-expansion-panel-header>
     <mat-action-row>
       <button mat-button  color="primary">EDIT</button>
       <button mat-button (click)= "onDelete(post._id)" color="warn">DELETE</button>
