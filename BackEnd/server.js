@@ -59,6 +59,8 @@ app.post('/api/posts', function(req, res){
         product_category: req.body.product_category,
         product_price: req.body.product_price,
     });
+
+    res.send("Database upload acknowledged")
 })
 
 app.get('/api/posts', function(req, res){

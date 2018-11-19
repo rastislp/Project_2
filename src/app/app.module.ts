@@ -22,7 +22,7 @@ const appRoutes: Routes = [
     component: CatalogComponent
   },
   {
-    path: 'create',
+    path: 'Insert product',
     component: InsertComponent
   }
 ];

@@ -1,6 +1,27 @@
 <mat-card>
   <form (submit)="onAddPost(postForm)" #postForm="ngForm">
-    <mat-form-field>
+    
+    
+
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td><mat-form-field>
       <input
         matInput
         rows="1"
@@ -10,9 +31,9 @@
         required
         minlength="3"
         #product_id="ngModel">
-      <mat-error *ngIf="product_id.invalid">Please enter a post title.</mat-error>
-    </mat-form-field>
-    <mat-form-field>
+      <mat-error *ngIf="product_id.invalid">Please enter a product id.</mat-error>
+    </mat-form-field></td>
+    <td><mat-form-field>
       <input
         matInput
         rows="2"
@@ -22,9 +43,9 @@
         required
         minlength="3"
         #product_name="ngModel">
-      <mat-error *ngIf="product_name.invalid">Please enter a post title.</mat-error>
-    </mat-form-field>
-    <mat-form-field>
+      <mat-error *ngIf="product_name.invalid">Please enter a product name.</mat-error>
+    </mat-form-field></td>
+    <td><mat-form-field>
       <input
         matInput
         rows="3"
@@ -34,9 +55,9 @@
         required
         minlength="3"
         #product_category="ngModel">
-      <mat-error *ngIf="product_category.invalid">Please enter a post title.</mat-error>
-    </mat-form-field>
-    <mat-form-field>
+      <mat-error *ngIf="product_category.invalid">Please enter a product category.</mat-error>
+    </mat-form-field></td>
+    <td><mat-form-field>
       <input
         matInput
         rows="4"
@@ -44,12 +65,18 @@
         ngModel
         required
         #product_price="ngModel">
-      <mat-error *ngIf="product_price.invalid">Please enter a post title.</mat-error>
-    </mat-form-field>
-    <button
+      <mat-error *ngIf="product_price.invalid">Please enter a product.</mat-error>
+    </mat-form-field></td>
+  </tr>
+
+</table>
+
+</body>
+</html>
+<br>
+<button
       mat-raised-button
       color="accent"
       type="submit">Save Post</button>
   </form>
 </mat-card>
-
