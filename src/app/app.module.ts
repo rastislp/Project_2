@@ -15,10 +15,11 @@ import { MatInputModule,
   MatToolbarModule,
   MatExpansionModule} from '@angular/material';
 import { InsertComponent } from './insert/insert.component';
+import { CustomersComponent } from './customers/customers.component';
 
 const appRoutes: Routes = [
   {
-    path: 'list',
+    path: 'Products',
     component: CatalogComponent
   },
   {
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     CatalogComponent,
-    InsertComponent
+    InsertComponent,
+    CustomersComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
