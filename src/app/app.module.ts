@@ -25,6 +25,10 @@ const appRoutes: Routes = [
   {
     path: 'Insert product',
     component: InsertComponent
+  },
+  {
+    path: 'Customers',
+    component: CustomersComponent
   }
 ];
 
