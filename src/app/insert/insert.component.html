@@ -7,7 +7,7 @@
 <head>
 <style>
 table, th, td {
-    border: 1px solid black;
+    border: 2px solid black;
 }
 </style>
 </head>
@@ -29,7 +29,7 @@ table, th, td {
         name="product_id"
         ngModel
         required
-        minlength="3"
+        minlength="1"
         #product_id="ngModel">
       <mat-error *ngIf="product_id.invalid">Please enter a product id.</mat-error>
     </mat-form-field></td>
@@ -55,6 +55,7 @@ table, th, td {
         required
         minlength="3"
         #product_category="ngModel">
+       
       <mat-error *ngIf="product_category.invalid">Please enter a product category.</mat-error>
     </mat-form-field></td>
     <td><mat-form-field>

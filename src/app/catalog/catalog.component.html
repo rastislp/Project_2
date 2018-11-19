@@ -1,16 +1,37 @@
 
+   
 
-<mat-toolbar color="primary">Catalog</mat-toolbar>
+<mat-toolbar color="primary"><pre>           ID                    Name               Description               Price</pre>  </mat-toolbar>
 <mat-accordion multi="true" *ngIf="posts.length > 0">
   <mat-expansion-panel [expanded]="false" *ngFor="let post of posts">
     <mat-expansion-panel-header>
-      {{ post.product_id }}
-
-      {{ post.product_name }}
-   
-      {{ post.product_category }}
-
-    {{ post.product_price }}
+     
+        <head>
+            <style>
+           
+         
+            table.d {
+                table-layout: fixed;
+                width: 1000px; 
+                border: 1px solid white; 
+            }
+            </style>
+            </head>
+            
+            
+            
+            <table class="d">
+              <tr>
+                <th> {{post.product_id }}  </th>
+                <th> {{ post.product_name }}  </th>
+                <th> {{ post.product_category }}  </th>
+                <th> {{ post.product_price }}  </th>
+              </tr>
+            </table>
+            
+      
+       
+ 
   </mat-expansion-panel-header>
     <mat-action-row>
 
@@ -18,4 +39,4 @@
     </mat-action-row>
   </mat-expansion-panel>
 </mat-accordion>
-<p class="info-text mat-body-1" *ngIf="posts.length <= 0">No posts added yet!</p> 
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0">No products added yet!</p> 
