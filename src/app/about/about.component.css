@@ -1,0 +1,9 @@
+.example-card {
+    max-width: 800px;
+  }
+  
+  .example-header-image {
+    background-image: url('http://www.fashionforwardtrends.com/wp-content/uploads/2016/05/logo-avon.jpg');
+    background-size: cover;
+  }
+  
