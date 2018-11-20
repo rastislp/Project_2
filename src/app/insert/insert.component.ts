@@ -5,7 +5,7 @@ import {PostService} from '../services/post.service';
 @Component({
   selector: 'app-insert',
   templateUrl: './insert.component.html',
-  styleUrls: ['./insert.component.css']
+  styleUrls: ['./insert.component.scss']
 })
 export class InsertComponent implements OnInit {
 
