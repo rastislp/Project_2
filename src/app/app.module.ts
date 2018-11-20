@@ -24,7 +24,7 @@ import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   {
-    path: 'Products',
+    path: 'Catalog',
     component: CatalogComponent
   },
   {
